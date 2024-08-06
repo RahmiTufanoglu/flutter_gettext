@@ -109,8 +109,7 @@ class Gettext {
   }) {
     final translation = _getTranslation(domain ?? this.domain, msgctxt, msgid);
 
-    //if (translation == null || translation.msgstr[0].isEmpty) {
-    if (translation == null) {
+    if (translation == null || translation.msgstr[0].isEmpty) {
       _warn('No translation was found for '
           'msgid "$msgid" in msgctxt "$msgctxt" and domain "$domain"');
       return msgid;
